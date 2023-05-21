@@ -22,50 +22,77 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-image: url("../Illustr Logo/All pages/arrière_plan.png");
+   
     
 }
 /* *******************************HEADER******************************************/
 header .icon{
     display: grid;
     gap: 20px;
-    margin-left:0.5%;
+    margin-left: 3%;
     top: 210px;
-    position: relative;
+    position: fixed;
+    z-index: 1000;
    
 }
-header section{
-    border-left: 5px solid  #9E91B7;
-    margin-left: 3%;
-    padding-bottom: 19%;
-   
+header .verticale_line1{
+    border-left: 5px solid #9E91B7;
+    display: inline-block;
+    height: 350px;
+    margin: 0 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    
 }
 header .head_icon{
-    border-left: 5px solid  #9E91B7;  
     position: absolute;
     top:0;
     left: 5%;
     width: 5px;
     height: 20px;
     padding-top: 3%;
-    padding-bottom: 15%;
     padding-left: 5%;
     display: flex;
     
 }
-ul li{
+header .icon img:hover{
+    -webkit-filter: sepia(50%) saturate(2900%) hue-rotate(210deg);
+    filter:  inverT(50%) sepia(100%) saturate(2000%) hue-rotate(190deg);
+}
+
+header .verticale_line2{
+    border-left: 5px solid #9E91B7;
+    display: inline-block;
+    height: 210px;
+    left: 40px;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    
+}
+header .head_icon:hover{
+    -webkit-filter:  sepia(100%) saturate(2000%) hue-rotate(190deg);
+    filter:  sepia(100%) saturate(2000%) hue-rotate(190deg);
+}
+ul li:not(ul.foot li){
     float: right;
     list-style-type: none;
     position: relative;
     right: 5%;
-    top: -120px;
     margin-left: 5%;
-   
-    
+    font-family: myFont3;
+
     
 }
 li a:not(li a.active){
     color: white;
     text-decoration: none;
+}
+
+li:hover{
+    color: white;
+    text-decoration: underline;
 }
 li a.active{
     color: rgb(124, 120, 208);
@@ -91,15 +118,15 @@ header div.head_content p, div.head_content a{
 header div.head_content p,header div.head_content h1,header div.head_content h2{
     position: relative;
     left: 13%;
-    top: -200px;
+    top: 150px;
     
     
 }
  div.head_content img{
     float: right;
-    top: -290px;
+    top: 60px;
     position: relative;
-   left:10%;
+    left:10%;
    
 }
 /* CARD */
@@ -110,6 +137,9 @@ div.card_item{
     margin-left: 4%;
    padding-left: 21.5%;
    margin-top: -30%;
+   position: relative;
+   top: 300px;
+   z-index: 0;
 }
 header .card h2{
     color: #9E91B7;
@@ -119,33 +149,262 @@ header .card h2{
 .card_img{
     float: left;
     position: relative;
-    top: -87px;
+    top: 210px;
     margin-left: 5%;
+    z-index: 1000;
 }
 .contentItem{
     float: left;
     font-size: smaller;
     padding-right: 0.5%;
+    position: relative;
+    top: 10px;
 }
 .contentItem_img{
     float: left;
+    position: relative;
+    top: 0px;
 }
 .contentItem1{
     float: left;
     font-size: smaller;
     margin-right: -50px;
     padding-left: 0.5%;
+    position: relative;
+    top: 10px;
 }
 .contentItem1_img{
     float: right;
     margin-right: -17%;
+    position: relative;
+    top: 2px;
 }
 .button_next{
     border-radius: 50%;
     background-color: #021740;
     position: absolute;
-    right: -10%; top:120%;
+    right: -10%; 
+    top:96%;
     font-family:myFont2;
     padding: 10px;
     font-size: smaller;
 }
+/* ******************************CONTENU************************************ */
+/* section */
+section:not(section.contact), aside{
+   display:table-cell;
+}
+section:not(section.contact){
+    padding-left: 10%;
+    position: relative;
+    text-align: justify;
+    width:  70%;
+    
+    
+}
+article.sec_naissance h2{
+    color: #9E91B7;
+    font-family: myFont3;
+    font-size: 25px;
+    clear: both;
+    position: relative;
+    top: -30px;
+    
+}
+
+article.sec_naissance p{
+    color: white;
+    font-family: myFont2;
+    font-size: 15px;  
+    position: relative;
+    top: -30px;
+    
+}
+article.sec_vengeur p, article.sec_justicier p{
+    color: white;
+    font-family: myFont2;
+    font-size:15px;  
+    position: relative;
+    top: -30px; 
+}
+article.sec_vengeur h2, article.sec_justicier h2{
+    color: #9E91B7;
+    font-family: myFont3;
+    font-size: 25px;   
+    position: relative;
+    top: -30px;
+}
+/* aside */
+aside, aside img{
+    padding-left: 5%;
+    
+}
+aside{
+    position: relative;
+    top: 250px;
+    
+}
+
+aside span{
+    display: block;
+    padding-left: 35%;
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
+    font-family: myFont2;
+    padding-bottom: 5%;
+}
+aside .bio{
+   background-color: white;
+   border-radius: 10px;
+   padding: 80% 0% 5% 6%;
+   width: 130%;
+}
+aside div.bouton{
+    display: flex;
+    gap: 3%;   
+}
+aside div.bouton button{
+    background-color: #3D2DA6;
+    border-radius: 5px;   
+    border: none;
+    padding: 2.5%;
+    font-family: myFont2;
+    font-size: 13px;
+    color: white;
+}
+aside div.info{
+    font-family: myFont2;
+    font-size: 11px;
+}
+
+aside img{
+    position: relative;
+    top: 190px;
+    left: 15%;
+}
+/* contact */
+section.contact div{
+    background-image: url('../Illustr Logo/Accueil/Pantherhome7.png');
+    padding: 20% 15% 20% 10% ;
+    margin-top: -8%;
+}
+form{
+    text-align: center;
+    background-image: linear-gradient(to bottom ,white ,rgba(255,255,255,0.1) );
+    width: 100%;
+    border-radius: 100px;
+    padding: 5% 0% 5% 0%;
+    
+    
+}
+fieldset{
+    border: none;
+    font-family: myFont2;
+    font-size: 13px;
+}
+fieldset strong{
+    font-size: 35px;
+}
+form input:not(input.btn), textarea{
+   padding: 10px;
+   border-radius: 38px;
+   border: 1px solid black;
+   width: 45%;
+   background-color: rgba(255,255,255,0.1);
+   font-family: myFont2;
+    font-size: 15px;
+}
+fieldset input.btn{
+    font-family: myFont2;
+    font-size: 13px;
+    padding: 10px 20px 10px 20px;
+   border-radius: 20px;
+   border: none;
+   background-color: #fdecfd;
+}
+fieldset input.btn:hover{
+    box-shadow:0 0 20px #021740 ;
+    
+}
+/* ******************************footer*************************************** */
+footer{
+    background-image: url('../Illustr Logo/All pages/back_footer.png');
+    height: 100vh;
+    width: 180vh;
+    top: 10%;
+}
+div.image{
+   margin-left: 10%;
+}
+div.image .img1{
+    margin-top: 10%;
+    position: relative;
+    top: 125px;
+ }
+ 
+div.image .img2{
+    position: relative;
+    top: -10px;
+    left: -220px;
+    
+ }
+ div.image .img2:hover{
+    -webkit-filter: sepia(50%) saturate(2900%) hue-rotate(210deg);
+    filter:  sepia(50%) saturate(2900%) hue-rotate(210deg);
+}
+ div.page,div.reseaux{
+    float: right;
+ }
+ div.page{
+    margin-top: -25%;
+   position: relative;
+   left: -50%;
+    color: white;
+    font-family: myFont2;
+    font-size: 13px;
+    line-height: 30px;
+    
+ }
+ div.page a{
+    color: white;
+    font-family: myFont2;
+   text-decoration: none;
+ }
+ div.page a:hover{
+   text-decoration: underline;
+ }
+ div.page h3{
+    letter-spacing: 8px;
+    font-size: 16px;
+ } 
+div.reseaux{
+    margin-top: -25%;
+    margin-right: 5%;
+    color: white;
+    font-family: myFont2;
+    letter-spacing: 10px;
+
+ }
+ div.reseaux img{
+    margin-left: 5%; 
+
+ }
+ div.copyright{
+    margin-left: 50%;
+    color: white;
+    font-family: myFont2;
+    font-size: 14px;
+ }
+ div.copyright li{
+    float: left;
+    margin-left: 5%;
+    position: relative;
+    left: 5%;
+   
+ }
+ div.copyright p{
+    position: relative;
+    top: 35px;
+    left: -20%;
+ }
+ 
