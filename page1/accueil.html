@@ -10,10 +10,10 @@
 <body>
 <!-- ----------------------------------HEADER--------------------------------- -->
     <header>
-        <div class="head" id="top">
+        <div class="head" id="top" >
             <span class="verticale_line1"></span>
             <span class="verticale_line2"></span>
-               <a href="#top">
+               <a href="accueil.html">
                     <div class="head_icon">
                         <img src="../Illustr Logo/All pages/icon_SAYNA.png" alt="icon_SAYNA">
                         <img src="../Illustr Logo/All pages/icon_x.png" alt="icon_x">
@@ -39,10 +39,10 @@
         </div>
         <div class="head_content">
             <div class="item" id="propos">
-                <img src="../Illustr Logo/Accueil/Pantherhome1..png" alt="Panther" width="70%" height="70%">
-                    <h1> BLACK PANTHER </h1>
-                    <h2> WAKANDA FOREVER </h2> 
-                    <p> En plus d'être un film qui fait la part belle aux héroïnes, Black Panther rend <br>  
+                <img class="slide"src="../Illustr Logo/Accueil/Pantherhome1..png" alt="Panther" width="70%" height="70%">
+                    <h1 class="slide"> BLACK PANTHER </h1>
+                    <h2 class="slide"> WAKANDA FOREVER </h2> 
+                    <p class="slide"> En plus d'être un film qui fait la part belle aux héroïnes, Black Panther rend <br>  
                         hommage  aux  cultures  africaine  et  afro-américaine.  On  y  évoque  le <br> 
                         racisme, la colonisation et les violences contre les afro-américains. <br>
                         Ce film marque tout une génération, “c'est 100% africain et c'est parfait”. <br>
@@ -50,7 +50,7 @@
                      </p>
             </div> 
         </div>
-        <div class="card"> 
+        <div class="card slide" > 
             <img class="card_img"src="../Illustr Logo/Accueil/Pantherhome2.png"  alt="Black Panther" width="20%" height="20%">            
             <div class="card_item">
                 <div class="contentItem"  >
@@ -61,7 +61,7 @@
                         valu le surnom de Killmonger. D'origine Wakandaise, <br>                                                                    
                         et  se  sentant  abandoné  par  sa  nation,  il  cherche  à  <br>                                                            
                         détroner T'Challa dans une quête vers le pourvoir. <br>                                                                     
-                       <a href=""> Voir plus > </a>
+                        <a href=""> Voir plus > </a> 
                     </p> 
                 </div>
                     <img class="contentItem_img"src="../Illustr Logo/Accueil/Pantherhome3.png" alt="Black Panther" width="23%" height="23%">
@@ -76,14 +76,15 @@
                         <a href=""> Voir plus > </a>
                     </p>
                 </div>
-                    <img class="contentItem1_img"  src="../Illustr Logo/Accueil/Pantherhome4.png"  alt="Black Panther" width="17%" height="17%">
-                 <p class="button_next">></p>
+                <img class="contentItem1_img "  src="../Illustr Logo/Accueil/Pantherhome4.png"  alt="Black Panther" width="17%" height="17%">
+                <p class="button_next">></p>
             </div>
         </div>
     </header>
 <!-- -----------------------------------------CONTENU------------------------------------ -->
     <main>
-        <section >
+        <section class="slide">
+            <!-- --------------------------------article------------------------ -->
             <article class="sec_naissance">
                 <h2> Naissance d'un prince </h2>
                 <p> T'Challa est né au Wakanda, un pays isolationniste situé en Afrique, du monarque régnant T'Chaka et de sa  femme  
@@ -153,9 +154,10 @@
                 </p>
             </article>
         </section>
-        <aside>
-            <img src="../Illustr Logo/Accueil/Pantherhome5.png" alt="Black Panther" width="95%" height="95%">
-            <div class="bio">
+        <!-- ------------------------------------aside--------------------------------- -->
+        <aside >
+            <img class="slide" src="../Illustr Logo/Accueil/Pantherhome5.png" alt="Black Panther" width="95%" height="95%">
+            <div class="bio slide" >
                 <span>T'Challa</span>
                 <div class="bouton">
                     <button>Black Panther</button>
@@ -183,11 +185,12 @@
                     </p>
                 </div>
             </div>
-            <img src="../Illustr Logo/Accueil/Pantherhome6.png" alt="Panther noir" width="155%" height="155%">
+            <img class="panthere"src="../Illustr Logo/Accueil/Pantherhome6.png" alt="Panther noir" width="155%" height="155%">
         </aside>
-        <section class="contact">
-            <div>
-                <form action="">
+        <!-- -------------------section contact------------------------------ -->
+        <section class="contact slide">
+            <div class="container">
+                <form >
                     <fieldset>
                         <legend>Besoin d'intervention du Wakanda <br> 
                             <strong>Contactez nous !</strong>
@@ -195,24 +198,36 @@
                         <input type="text" value="Nom"> <br><br>
                         <input type="text" value="Prenom"> <br> <br>
                         <textarea name="comment" rows="8" cols="35">Message</textarea><br><br>
-                        <input type="submit" value="ENVOYER" class="btn">
+                    <a href="#popup-box"><input type="submit" value="ENVOYER" class="btn box"></a> 
                     </fieldset>
                 </form> 
+                <div id="popup-box" class="modal">
+                    <div class="content1">
+                        <h1 style="color:white;text-transform: uppercase;">
+                           Bien reçu
+                        </h1>
+                        <a href="#"
+                           class="box-close">
+                            ×
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="image">
-            <img class="img1" src="../Illustr Logo/All pages/footer1.png" alt=" bulle" width="25%" height="25%">
-            <a href="#top"><img class="img2" src="../Illustr Logo/All pages/footer2.png" alt="icon_SAYNA_MARVEL" width="15%" height="15%"></a>
-        </div>
-        <div class="reseaux" >
-            <h3> RETROUVEZ NOUS</h3>
-            <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="../Illustr Logo/All pages/footer3.png" alt="icon_facebook"></a>
-            <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="../Illustr Logo/All pages/footer4.png" alt="icon_instagram"></a>
-            <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="../Illustr Logo/All pages/footer5.png" alt="icon_twitter"></a>
-            <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img src="../Illustr Logo/All pages/footer6.png" alt="icon_tiktok"></a>
-         </div>
+<!-- -------------------------------footer----------------------------------------------------- -->
+<footer class="slide">
+    <div class="image ">
+        <img class="img1 agrandir" src="../Illustr Logo/All pages/footer1.png" alt=" bulle" width="20%" height="20%">
+        <a href="../page1/accueil.html"><img class="img2" src="../Illustr Logo/All pages/footer2.png" alt="icon_SAYNA_MARVEL" width="13%" height="13%"></a>
+    </div>
+    <div class="reseaux " >
+        <h3> RETROUVEZ NOUS</h3>
+        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="res" src="../Illustr Logo/All pages/footer3.png" alt="icon_facebook"></a>
+        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="res" src="../Illustr Logo/All pages/footer4.png" alt="icon_instagram"></a>
+        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="res" src="../Illustr Logo/All pages/footer5.png" alt="icon_twitter"></a>
+        <a href="http://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther.html"><img class="res" src="../Illustr Logo/All pages/footer6.png" alt="icon_tiktok"></a>
+     </div>
         <div class=" page">
             <h3>PAGES</h3>
             <a href="#propos"><span>A propos</span></a> <br><a href="../page2/wakanda.html"><span>Wakanda</span></a>
@@ -223,7 +238,6 @@
                     <li>Politique de confidentialité</li>
                     <li>Condition d'utilisation</li>
                 </ul>
-            
         </div>
     </footer>
 </body>

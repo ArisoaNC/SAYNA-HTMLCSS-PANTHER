@@ -1,0 +1,271 @@
+/* *****************************font******************************* */
+@font-face {
+    font-family: myFont1;
+    src: url(../fonts/PantheraRegular-MVZ9J.ttf);
+}
+@font-face {
+    font-family: myFont2;
+    src: url(../fonts/Cantarell-Regular.ttf);
+}
+@font-face {
+    font-family: myFont3;
+    src: url(../fonts/BEYNO.ttf);
+}
+@font-face {
+    font-family: myFont4;
+    src: url(../fonts/WakandaForever-Regular.ttf);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../Illustr Logo/All pages/arrière_plan.png");
+   
+    
+}
+
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: slide-in 2s ease-in-out; /* Durée et effet de transition */
+  }
+  
+  .slide * {
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Commencez avec une opacité de 0 pour l'effet de fade in */
+    animation: fade-in 2s ease-in-out forwards; /* Durée et effet de transition pour le fade in */
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%); /* Début de la translation */
+    }
+    100% {
+      transform: translateX(0); /* Fin de la translation */
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0; /* Début de l'opacité à 0 */
+    }
+    100% {
+      opacity: 1; /* Fin de l'opacité à 1 */
+    }
+  }
+  
+/* *******************************HEADER******************************************/
+header .head_icon{
+    position: absolute;
+    top:0;
+    left: 5%;
+    width: 5px;
+    height: 20px;
+    padding-top: 3%;
+    padding-left: 5%;
+    display: flex;
+    
+}
+
+header .head_icon:hover{
+    -webkit-filter:  sepia(100%) saturate(2000%) hue-rotate(190deg);
+    filter:  sepia(100%) saturate(2000%) hue-rotate(190deg);
+}
+ul li:not(ul.foot li){
+    float: right;
+    list-style-type: none;
+    position: relative;
+    right: 5%;
+    margin-left: 5%;
+    font-family: myFont3;
+
+    
+}
+li a:not(li a.active){
+    color: white;
+    text-decoration: none;
+}
+
+li:hover{
+    color: white;
+    text-decoration: underline;
+}
+li a.active{
+    color: rgb(124, 120, 208);
+}
+header div.head_item{
+    background-image: url('../Illustr Logo/Wakanda/Pantherwakanda1.png');
+    background-size: cover;
+   margin-left: -10%;
+    padding: 20%;
+}
+header .head_item h1{
+   font-family: myFont1;
+   font-size: 36px;
+   font-weight: lighter;
+   color: #9E91B7;
+}
+header .head_item h2{
+    font-family: myFont4;
+    font-size: 25px;
+    color: #9E91B7;
+}
+header .head_item p{
+    font-family: myFont2;
+    font-size: 13px;
+    color: white;
+}
+/* *********************************CONTENU*************************************** */
+main h2{
+    font-family: myFont3;
+    font-size: 25px;
+    color: #9E91B7;
+}
+main p{
+    font-size: 16px;
+    font-family: myFont2;
+    color: white;
+}
+main {
+    background-image: url('../Illustr Logo/Wakanda/Pantherwakanda2.png');
+    background-size: 150%;
+    background-position-x:  -300px;
+    background-repeat: no-repeat;
+    padding-top: 15%;
+
+    
+}
+.row{
+    display: flex;
+}
+.column{
+    flex: 1;
+    flex-wrap: 1 1fr;
+}
+/* left section */
+main .left_sec{
+    padding-left: 2%;
+    position: relative;
+    text-align: justify;
+    width:  23%;
+    
+}
+main .video{
+    background-color: #3D2DA6;
+    padding: 15% 1% 15% 1% ;
+}
+/* right section */
+main .right_sec{
+    padding-left: 5%;
+    padding-right: 3%;
+    position: relative;
+    text-align: justify;
+    width:  30%;
+    
+}
+
+
+/* ******************************footer*************************************** */
+footer{
+    background-image: url('../Illustr Logo/All pages/back_footer.png');
+    height: 100vh;
+    top: 10%;
+}
+div.image{
+   margin-left: 10%;
+}
+div.image:hover .img2{
+    transform: scale(1.2) translate(5%);
+    
+ }
+img.agrandir:hover{
+    transform: scale(1.2) translate(5%);
+
+}
+img.agrandir{
+    transition: transform .6s;
+}
+div.image .img1{
+    margin-top: 10%;
+    position: relative;
+    top: 50px;
+ }
+ 
+ 
+div.image .img2{
+    position: relative;
+    top: -50px;
+    left: -150px;
+    transition: transform .6s;
+   
+    
+ }
+ div.image .img2:hover{
+    -webkit-filter: sepia(50%) saturate(2900%) hue-rotate(210deg);
+    filter:  sepia(50%) saturate(2900%) hue-rotate(210deg);
+    
+
+}
+ div.page,div.reseaux{
+    float: right;
+ }
+ div.page{
+    margin-top: -25%;
+   position: relative;
+   left: -50%;
+    color: white;
+    font-family: myFont2;
+    font-size: 13px;
+    line-height: 30px;
+    
+ }
+ div.page a{
+    color: white;
+    font-family: myFont2;
+   text-decoration: none;
+ }
+ div.page a:hover{
+   text-decoration: underline;
+ }
+ div.page h3{
+    letter-spacing: 8px;
+    font-size: 16px;
+ } 
+div.reseaux{
+    margin-top: -25%;
+    margin-right: 5%;
+    color: white;
+    font-family: myFont2;
+    letter-spacing: 10px;
+
+ }
+ div.reseaux img.res{
+    margin-left: 5%; 
+    transition: transform .6s;
+ }
+ div.reseaux img.res:hover{
+    transform: scale(1.2);
+
+ }
+ div.copyright{
+    margin-left: 50%;
+    color: white;
+    font-family: myFont2;
+    font-size: 14px;
+ }
+ div.copyright li{
+    float: left;
+    margin-left: 5%;
+    position: relative;
+    left: 10%;
+   
+ }
+ div.copyright p{
+    position: relative;
+    top: 35px;
+    left: -20%;
+ }

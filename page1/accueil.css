@@ -26,6 +26,32 @@ body{
     
 }
 /* *******************************HEADER******************************************/
+.slide {
+    animation: slide-in 2s ease-in-out; /* Durée et effet de transition */
+  }
+  
+  .slide * {
+    opacity: 0; /* Commencez avec une opacité de 0 pour l'effet de fade in */
+    animation: fade-in 2s ease-in-out forwards; /* Durée et effet de transition pour le fade in */
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%); /* Début de la translation */
+    }
+    100% {
+      transform: translateX(0); /* Fin de la translation */
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0; /* Début de l'opacité à 0 */
+    }
+    100% {
+      opacity: 1; /* Fin de l'opacité à 1 */
+    }
+  }
 header .icon{
     display: grid;
     gap: 20px;
@@ -57,8 +83,8 @@ header .head_icon{
     
 }
 header .icon img:hover{
-    -webkit-filter: sepia(50%) saturate(2900%) hue-rotate(210deg);
-    filter:  inverT(50%) sepia(100%) saturate(2000%) hue-rotate(190deg);
+    -webkit-filter: invert(30%);
+    filter:  invert(100%)  brightness(500%) ;
 }
 
 header .verticale_line2{
@@ -72,8 +98,8 @@ header .verticale_line2{
     
 }
 header .head_icon:hover{
-    -webkit-filter:  sepia(100%) saturate(2000%) hue-rotate(190deg);
-    filter:  sepia(100%) saturate(2000%) hue-rotate(190deg);
+    -webkit-filter:  sepia(1000%) saturate(2000%) hue-rotate(270deg) ;
+    filter:  sepia(1000%) saturate(2000%) hue-rotate(270deg)  ;
 }
 ul li:not(ul.foot li){
     float: right;
@@ -141,6 +167,9 @@ div.card_item{
    top: 300px;
    z-index: 0;
 }
+div.card_item a{
+    color: white;
+}
 header .card h2{
     color: #9E91B7;
     font-family: myFont3;
@@ -158,8 +187,9 @@ header .card h2{
     font-size: smaller;
     padding-right: 0.5%;
     position: relative;
-    top: 10px;
+    top: -5px;
 }
+
 .contentItem_img{
     float: left;
     position: relative;
@@ -167,11 +197,12 @@ header .card h2{
 }
 .contentItem1{
     float: left;
-    font-size: smaller;
+    font-size: small;
     margin-right: -50px;
     padding-left: 0.5%;
     position: relative;
-    top: 10px;
+    top: -5px;
+   
 }
 .contentItem1_img{
     float: right;
@@ -184,7 +215,7 @@ header .card h2{
     background-color: #021740;
     position: absolute;
     right: -10%; 
-    top:96%;
+    top:36%;
     font-family:myFont2;
     padding: 10px;
     font-size: smaller;
@@ -195,12 +226,11 @@ section:not(section.contact), aside{
    display:table-cell;
 }
 section:not(section.contact){
-    padding-left: 10%;
+    padding-left: 5%;
     position: relative;
     text-align: justify;
     width:  70%;
-    
-    
+   
 }
 article.sec_naissance h2{
     color: #9E91B7;
@@ -236,8 +266,11 @@ article.sec_vengeur h2, article.sec_justicier h2{
 }
 /* aside */
 aside, aside img{
-    padding-left: 5%;
+    padding-left: 4%;
     
+}
+aside img.panthere{
+   margin-left: -35%;
 }
 aside{
     position: relative;
@@ -283,15 +316,54 @@ aside img{
     left: 15%;
 }
 /* contact */
+
+
+.modal {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(254, 126, 126, 0.7);
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.content1 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    background: white;
+    width: 400px;
+    padding: 1em 2em;
+    border-radius: 4px;
+}
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+.box-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #fe0606;
+    text-decoration: none;
+    font-size: 30px;
+}
+  
 section.contact div{
     background-image: url('../Illustr Logo/Accueil/Pantherhome7.png');
     padding: 20% 15% 20% 10% ;
     margin-top: -8%;
+    width: 95%;
 }
 form{
     text-align: center;
     background-image: linear-gradient(to bottom ,white ,rgba(255,255,255,0.1) );
-    width: 100%;
+    width: 80%;
     border-radius: 100px;
     padding: 5% 0% 5% 0%;
     
@@ -310,7 +382,7 @@ form input:not(input.btn), textarea{
    border-radius: 38px;
    border: 1px solid black;
    width: 45%;
-   background-color: rgba(255,255,255,0.1);
+   background-color: transparent;
    font-family: myFont2;
     font-size: 15px;
 }
@@ -330,27 +402,42 @@ fieldset input.btn:hover{
 footer{
     background-image: url('../Illustr Logo/All pages/back_footer.png');
     height: 100vh;
-    width: 180vh;
     top: 10%;
+    width: 120%;
+    
 }
 div.image{
-   margin-left: 10%;
+   margin-left: 5%;
+   
+}
+div.image:hover .img2{
+    transform: scale(1.2) translate(5%);
+    
+ }
+img.agrandir:hover{
+    transform: scale(1.2) translate(5%);
+
+}
+img.agrandir{
+    transition: transform .6s;
 }
 div.image .img1{
     margin-top: 10%;
     position: relative;
-    top: 125px;
+    top: 50px;
  }
+ 
  
 div.image .img2{
     position: relative;
-    top: -10px;
-    left: -220px;
+    top: -80px;
+    left: -200px;
+    transition: transform .6s;
     
  }
  div.image .img2:hover{
-    -webkit-filter: sepia(50%) saturate(2900%) hue-rotate(210deg);
-    filter:  sepia(50%) saturate(2900%) hue-rotate(210deg);
+    -webkit-filter: sepia(1000%) saturate(2000%) hue-rotate(270deg);
+    filter: sepia(100%) saturate(2000%) hue-rotate(270deg);
 }
  div.page,div.reseaux{
     float: right;
@@ -358,11 +445,12 @@ div.image .img2{
  div.page{
     margin-top: -25%;
    position: relative;
-   left: -50%;
+   left: -60%;
     color: white;
     font-family: myFont2;
     font-size: 13px;
     line-height: 30px;
+   
     
  }
  div.page a{
@@ -379,18 +467,23 @@ div.image .img2{
  } 
 div.reseaux{
     margin-top: -25%;
-    margin-right: 5%;
     color: white;
     font-family: myFont2;
     letter-spacing: 10px;
+    position: relative;
+    left: -20%;
 
  }
- div.reseaux img{
+ div.reseaux img.res{
     margin-left: 5%; 
+    transition: transform .6s;
+ }
+ div.reseaux img.res:hover{
+    transform: scale(1.2);
 
  }
  div.copyright{
-    margin-left: 50%;
+    margin-left: 40%;
     color: white;
     font-family: myFont2;
     font-size: 14px;
@@ -399,8 +492,11 @@ div.reseaux{
     float: left;
     margin-left: 5%;
     position: relative;
-    left: 5%;
+    left: 1%;
    
+ }
+ ul.foot li:hover{
+    text-decoration: none;
  }
  div.copyright p{
     position: relative;
